@@ -1,0 +1,13 @@
+{
+    "image_path": "images/image1.jpg",
+    "annotations": [
+        {
+            "class": "class1",
+            "bbox": [10, 20, 100, 150]
+        },
+        {
+            "class": "class2",
+            "bbox": [200, 100, 120, 180]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-ml-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-ml
+  template:
+    metadata:
+      labels:
+        app: flask-ml
+    spec:
+      containers:
+        - name: flask-ml-container
+          image: flask-ml-app:latest  # Use the Docker image you built
+          ports:
+            - containerPort: 5000

@@ -1,0 +1,24 @@
+stages:
+  prepare_data:
+    cmd: python src/data/preprocessing.py
+    deps:
+    - src/data/preprocessing.py
+    outs:
+    - data/
+
+  train_model:
+    cmd: python src/train.py
+    deps:
+    - src/train.py
+    - src/models/model.py
+    deps:
+    - src/models/model.py
+    outs:
+    - models/
+
+  deploy_model:
+    cmd: python deploy/app/main.py
+    deps:
+    - deploy/app/main.py
+    deps:
+    - models/

@@ -1,0 +1,3 @@
+Flask
+torch
+# Add other dependencies as needed
