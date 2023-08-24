@@ -1,6 +1,13 @@
 # kinoo-assesment
 
-## Installation
+## source code (src folder)
+- data: Here, the structure of the data is mentioned. We would require storage to store our data (tools: S3, GCS)
+- models: Here, the structure of the model is mentioned. We would require this to train our model
+- train.py: script to run our model. Trained model file as a output
+- predict.py: script to run model inference. 
+
+
+## Deployment
 
 1. Clone the repository:
 ```
@@ -25,3 +32,6 @@ docker build -t your-image-name .
 kubectl apply -f deploy/kubernetes/deployment.yaml
 kubectl apply -f deploy/kubernetes/service.yaml
 ```
+
+## vertex_ai
+- Sample codes for Google cloud deployment process
